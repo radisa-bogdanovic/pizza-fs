@@ -5,7 +5,7 @@ export default function Hero() {
 	return (
 		<section className="hero">
 			<div className="py-8">
-				<h1 className="text-4xl font-semibold ">
+				<h1 className="text-4xl font-semibold leading-12">
 					Sve je bolje <br /> uz <span className="text-primary">Picu :)</span>
 				</h1>
 				<p className="my-4 text-gray-500 text-sm">
