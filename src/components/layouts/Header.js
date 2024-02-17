@@ -28,7 +28,10 @@ export default function Header() {
 			<nav className="flex items-center gap-4 text-gray-500">
 				{status === "authenticated" ? (
 					<>
-						<Link href={"/profile"}> Zdravo, {userName}</Link>
+						<Link href={"/profile"} className="whitespace-nowrap">
+							{" "}
+							Zdravo, {userName}
+						</Link>
 						<button
 							className="bg-primary  text-white px-6 rounded-full py-2"
 							onClick={() => {
