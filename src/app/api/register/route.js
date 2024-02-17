@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { User } from "../models/User";
+import bcrypt from "bcrypt";
 
 // Establish database connection
 
@@ -20,6 +21,9 @@ export async function POST(req) {
 			}
 		);
 	}
+
+	const salt = bcrypt.genSaltSync(10);
+	body.password = bcrypt.hashSync(rawPass, salt);
 
 	const createdUser = await User.create(body);
 	return Response.json(createdUser);
