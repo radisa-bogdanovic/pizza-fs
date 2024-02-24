@@ -24,7 +24,6 @@ export const authOptions = {
 				password: { label: "Password", type: "password" },
 			},
 			async authorize(credentials, req) {
-				console.log("");
 				try {
 					mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URL);
 					const { email, password } = credentials;
